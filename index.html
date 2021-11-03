@@ -1,1 +1,119 @@
-pancake test
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="a new type of database">
+  <title>PancakeDB</title>
+  <link href="/favicon.ico" rel="icon" />
+  <link href="/style.css" rel="Stylesheet" />
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+  $(function(){
+    $("#header").load("/header.html");
+  });
+  </script> 
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="meat-container">
+    <div class="meat">
+      <p class="meat-headline">
+        PancakeDB solves a problem that has stymied data engineering for
+        a decade: making streaming data accessible to batch and offline
+        analysis.
+      </p>
+
+      <div class="explain-item">
+        <img src="/assets/format_size_bar_chart.svg" width="300px" />
+        <div class="explain-item-right">
+          <p class="explain-item-headline">
+            Write like a stream, read like a ton of bricks.
+          </p>
+          <p class="explain-item-body">
+            With write response times of only 10ms and read throughput of
+            millions of rows per second per connection, PancakeDB is unlike
+            anything you've seen before.
+            It leverages a new columnar format using 30-50% less network
+            bandwidth and storage than .snappy.parquet.
+          </p>
+        </div>
+      </div>
+
+      <div class="explain-item">
+        <img src="/assets/cash_pancake.jpeg" width="270px" style="padding:15px" />
+        <div class="explain-item-right">
+          <p class="explain-item-headline">
+            The simplicity data engineers crave.
+          </p>
+          <p class="explain-item-body">
+            Founded by a data engineer to solve this problem universally,
+            PancakeDB lowers storage, compute, and engineering costs
+            dramatically.
+          </p>
+        </div>
+      </div>
+
+      <p class="meat-headline">
+        Use Cases
+      </p>
+
+      <div class="use-case">
+        <p class="use-case-body">
+          Company A is a large corporation. To support a wide range of
+          analytics and machine learning use cases, they have services to
+          ingest event data and processed streams as small Parquet files
+          in a data lake,
+          then compact those small files into large Parquet files.
+        </p>
+        <div class="use-case-right">
+          Company A would use PancakeDB to:
+          <ul class="use-case-advantages">
+            <li>save millions per year by compacting the data where it lives</li>
+            <li>support even faster reads than from Parquet</li>
+            <li>save engineering maintenance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="use-case">
+        <p class="use-case-body">
+          Company B is a mid-size startup. To support their scheduled and
+          ad-hoc analytics tools
+          including Spark, Hive, and Presto, they take nightly snapshots
+          of certain tables in their production database and upload them as
+          Avro files in S3.
+        </p>
+        <div class="use-case-right">
+          Company B would use PancakeDB to:
+          <ul class="use-case-advantages">
+            <li>enable real-time data freshness instead of nightly</li>
+            <li>alleviate load on the production database by removing nightly jobs</li>
+            <li>save engineering maintenance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="use-case">
+        <p class="use-case-body">
+          Company C is a new startup. They don't have any support for offline
+          analytics yet, and that's starting to become a problem. They're
+          hoping to set up a simple data stack and hire a data scientist.
+        </p>
+        <div class="use-case-right">
+          Company C would use PancakeDB to:
+          <ul class="use-case-advantages">
+            <li>make streaming data available for offline analysis with easy setup</li>
+            <li>get things right the first time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="a new type of database">
+  <title>PancakeDB</title>
+  <link href="/favicon.ico" rel="icon" />
+  <link href="/style.css" rel="Stylesheet" />
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+  $(function(){
+    $("#header").load("/header.html");
+  });
+  </script> 
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="meat-container">
+    <div class="meat" style="text-align: left">
+      <a href="https://github.com/pancake-db/spark-pancake-connector">Spark Connector</a><br />
+      <a href="https://github.com/pancake-db/pancake-core/blob/main/client/README.md">Rust Client</a><br />
+      <a href="https://github.com/pancake-db/pancake-scala-client">Scala Client</a><br />
+      <a href="https://github.com/pancake-db/pancake-idl">API Spec</a><br />
+    </div>
+  </div>
+</body>
+</html>
