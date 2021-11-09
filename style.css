@@ -2,7 +2,8 @@
   --pdb-beige: #faeb99;
   --pdb-brown: #e29933;
   --pdb-blue: #80b0ff;
-  --pdb-green: #009944;
+  --pdb-green: #339944;
+  --pdb-faint-green: #d9ead3;
   --max-width: 800px;
 }
 
@@ -104,9 +105,17 @@ ul {
 .use-case {
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
+  flex-direction: column;
   text-align: left;
   margin: 30px 0;
+}
+
+.use-case-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  margin: 0 0 20px 0;
 }
 
 .use-case-body {
@@ -120,6 +129,17 @@ ul {
   width: 50%;
 }
 
+.use-case-bottom {
+  text-align: center;
+}
+
 .use-case-advantages {
   color: var(--pdb-green);
+}
+
+.big-vert-spacer {
+  background-color: var(--pdb-blue);
+  width: 95%;
+  height: 3px;
+  margin: 10px 0;
 }

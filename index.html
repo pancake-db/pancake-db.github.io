@@ -64,53 +64,75 @@
       </p>
 
       <div class="use-case">
-        <p class="use-case-body">
-          Company A is a large corporation. To support a wide range of
-          analytics and machine learning use cases, they have services to
-          ingest event data and processed streams as small Parquet files
-          in a data lake,
-          then compact those small files into large Parquet files.
-        </p>
-        <div class="use-case-right">
-          Company A would use PancakeDB to:
-          <ul class="use-case-advantages">
-            <li>save millions per year by compacting the data where it lives</li>
-            <li>support even faster reads than from Parquet</li>
-            <li>save engineering maintenance</li>
-          </ul>
+        <div class="use-case-top">
+          <p class="use-case-body">
+            Company A is a new startup. They don't have any support for offline
+            analytics yet, and that's starting to become a problem. They're
+            hoping to start a simple but extensible data stack to do ad-hoc
+            analysis.
+          </p>
+          <div class="use-case-right">
+            Company A would use PancakeDB to:
+            <ul class="use-case-advantages">
+              <li>make streaming data available for offline analysis with easy setup</li>
+              <li>get things right the first time</li>
+            </ul>
+          </div>
         </div>
+        <div class="use-case-bottom">
+          <img src="/assets/ArchitectureExampleABefore.svg" height="250px" />
+          <img src="/assets/ArchitectureExampleAAfter.svg" height="250px" />
+        </div>
+        <div class="big-vert-spacer"></div>
       </div>
 
       <div class="use-case">
-        <p class="use-case-body">
-          Company B is a mid-size startup. To support their scheduled and
-          ad-hoc analytics tools
-          including Spark, Hive, and Presto, they take nightly snapshots
-          of certain tables in their production database and upload them as
-          Avro files in S3.
-        </p>
-        <div class="use-case-right">
-          Company B would use PancakeDB to:
-          <ul class="use-case-advantages">
-            <li>enable real-time data freshness instead of nightly</li>
-            <li>alleviate load on the production database by removing nightly jobs</li>
-            <li>save engineering maintenance</li>
-          </ul>
+        <div class="use-case-top">
+          <p class="use-case-body">
+            Company B is a mid-size startup. To support their scheduled and
+            ad-hoc analytics tools
+            like Spark, Hive, and Presto, they take nightly snapshots
+            of certain tables in their production database and upload them as
+            Avro files in S3.
+          </p>
+          <div class="use-case-right">
+            Company B would use PancakeDB to:
+            <ul class="use-case-advantages">
+              <li>enable real-time data freshness instead of nightly</li>
+              <li>alleviate load on the production database</li>
+              <li>support much faster reads than from Avro</li>
+              <li>save engineering maintenance</li>
+            </ul>
+          </div>
         </div>
+        <div class="use-case-bottom">
+          <img src="/assets/ArchitectureExampleBBefore.svg" height="250px" />
+          <img src="/assets/ArchitectureExampleBAfter.svg" height="250px" />
+        </div>
+        <div class="big-vert-spacer"></div>
       </div>
 
       <div class="use-case">
-        <p class="use-case-body">
-          Company C is a new startup. They don't have any support for offline
-          analytics yet, and that's starting to become a problem. They're
-          hoping to set up a simple data stack and hire a data scientist.
-        </p>
-        <div class="use-case-right">
-          Company C would use PancakeDB to:
-          <ul class="use-case-advantages">
-            <li>make streaming data available for offline analysis with easy setup</li>
-            <li>get things right the first time</li>
-          </ul>
+        <div class="use-case-top">
+          <p class="use-case-body">
+            Company C is a large corporation. To support a wide range of
+            analytics and machine learning use cases, they have services to
+            ingest event data and processed streams as small Parquet files
+            in a data lake,
+            then compact those small files into large Parquet files.
+          </p>
+          <div class="use-case-right">
+            Company C would use PancakeDB to:
+            <ul class="use-case-advantages">
+              <li>save millions per year in storage and compute</li>
+              <li>support even faster reads than from Parquet</li>
+              <li>save engineering maintenance</li>
+            </ul>
+          </div>
+        </div>
+        <div class="use-case-bottom">
+          <img src="/assets/ArchitectureExampleCBefore.svg" height="250px" />
+          <img src="/assets/ArchitectureExampleCAfter.svg" height="250px" />
         </div>
       </div>
     </div>
