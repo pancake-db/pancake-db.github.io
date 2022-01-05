@@ -127,7 +127,6 @@ code {
 
 .big-vert-spacer {
   background-color: var(--pdb-blue);
-  width: 95%;
   height: 3px;
   margin: 20px 0;
 }
