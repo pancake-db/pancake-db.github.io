@@ -3,7 +3,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="description" property="og:description" content="a columnar database for batch processing with fast writes">
+  <meta name="description" property="og:description" content="PancakeDB: the event ingestion database. Write from services and streams, and read for batch processing.">
   <meta property="og:image" content="https://pancakedb.com/logo.svg">
   <title>PancakeDB</title>
   <link href="/favicon.ico" rel="icon" />
@@ -25,6 +25,27 @@
   <div class="meat-container">
     <div class="meat">
       <p class="meat-headline">
+        The simplest and cheapest event ingestion solution.
+      </p>
+      <div class="code-block-title">
+        Write directly from your services and streams:
+      </div>
+      <code>
+        curl ... $PANCAKE_ENDPOINT/rest/write_to_partition_simple -d '{</br>
+        &nbsp;"table_name": "purchases",</br>
+        &nbsp;"rows": [{</br>
+        &nbsp;&nbsp;"user_id": "abc",</br>
+        &nbsp;&nbsp;"dollar_amount": 12.34</br>
+        &nbsp;"}]</br>
+        }'
+      </code>
+      <div class="code-block-title">
+        Do analytics and batch processing with real-time freshness:
+      </div>
+      <code>
+        spark.sql("select avg(dollar_amount) from purchases")
+      </code>
+      <p class="meat-headline">
         PancakeDB solves a problem that has stymied data engineering for
         a decade: making streaming data accessible to batch and offline
         analysis.
@@ -37,10 +58,10 @@
             Write like a stream, read like a ton of bricks.
           </p>
           <p class="explain-item-body">
-            With write response times of only 10ms and read throughput of
-            millions of rows per second per connection, PancakeDB is unlike
+            With write latency of only 10ms and read throughput of
+            millions of values per second per connection, PancakeDB is unlike
             anything you've seen before.
-            It leverages a new columnar format using 30-50% less network
+            Its new columnar format using 30-50% less network
             bandwidth and storage than .snappy.parquet.
           </p>
         </div>
@@ -53,7 +74,7 @@
             The simplicity data engineers crave.
           </p>
           <p class="explain-item-body">
-            Founded by a data engineer to solve this problem universally,
+            Founded by a data engineer to solve event ingestion universally,
             PancakeDB lowers storage, compute, and engineering costs
             dramatically.
           </p>
@@ -61,81 +82,33 @@
       </div>
 
       <p class="meat-headline">
-        Use Cases
+        For Small Companies
       </p>
 
-      <div class="use-case">
-        <div class="use-case-top">
-          <p class="use-case-body">
-            Company A is a new startup. They don't have any support for offline
-            analytics yet, and that's starting to become a problem. They're
-            hoping to start a simple but extensible data stack to do ad-hoc
-            analysis.
-          </p>
-          <div class="use-case-right">
-            Company A would use PancakeDB to:
-            <ul class="use-case-advantages">
-              <li>make streaming data available for offline analysis with easy setup</li>
-              <li>get things right the first time</li>
-            </ul>
-          </div>
-        </div>
-        <div class="use-case-bottom">
-          <img src="/assets/ArchitectureExampleABefore.svg" height="250" alt="Company A before PancakeDB"/>
-          <img src="/assets/ArchitectureExampleAAfter.svg" height="250" alt="Company A after PancakeDB"/>
-        </div>
-        <div class="big-vert-spacer"></div>
+      <ul class="pros">
+        <li>Set up your company's event ingestion solution in less than a day.</li>
+        <li>Enable real-time data freshness for all queries on your event tables.</li>
+        <li>Have confidence that PancakeDB will remain the cheapest and lowest-maintenance option as your company scales.</li>
+      </ul>
+
+      <p class="meat-headline">
+        For Large Companies
+      </p>
+
+      <ul class="pros">
+        <li>Reduce storage and compute costs with PancakeDB's new methodology.</li>
+        <li>Eliminate maintenance work with a trusted solution.</li>
+      </ul>
+      <div class="architecture-example">
+        <img src="/assets/ArchitectureExampleCBefore.svg" height="250" alt="Company C before PancakeDB"/>
+      </div>
+      <div class="architecture-example">
+        <img src="/assets/ArchitectureExampleCAfter.svg" height="250" alt="Company C after PancakeDB"/>
       </div>
 
-      <div class="use-case">
-        <div class="use-case-top">
-          <p class="use-case-body">
-            Company B is a mid-size startup. To support their scheduled and
-            ad-hoc analytics tools
-            like Spark, Hive, and Presto, they take nightly snapshots
-            of certain tables in their production database and upload them as
-            Avro files in S3.
-          </p>
-          <div class="use-case-right">
-            Company B would use PancakeDB to:
-            <ul class="use-case-advantages">
-              <li>enable real-time data freshness instead of nightly</li>
-              <li>alleviate load on the production database</li>
-              <li>support much faster reads than from Avro</li>
-              <li>save engineering maintenance</li>
-            </ul>
-          </div>
-        </div>
-        <div class="use-case-bottom">
-          <img src="/assets/ArchitectureExampleBBefore.svg" height="250" alt="Company B before PancakeDB"/>
-          <img src="/assets/ArchitectureExampleBAfter.svg" height="250" alt="Company B after PancakeDB"/>
-        </div>
-        <div class="big-vert-spacer"></div>
-      </div>
+      <div class="big-vert-spacer"></div>
 
-      <div class="use-case">
-        <div class="use-case-top">
-          <p class="use-case-body">
-            Company C is a large corporation. To support a wide range of
-            analytics and machine learning use cases, they have services to
-            ingest event data and processed streams as small Parquet files
-            in a data lake,
-            then compact those small files into large Parquet files.
-          </p>
-          <div class="use-case-right">
-            Company C would use PancakeDB to:
-            <ul class="use-case-advantages">
-              <li>save millions per year in storage and compute</li>
-              <li>support even faster reads than from Parquet</li>
-              <li>save engineering maintenance</li>
-            </ul>
-          </div>
-        </div>
-        <div class="use-case-bottom">
-          <img src="/assets/ArchitectureExampleCBefore.svg" height="250" alt="Company C before PancakeDB"/>
-          <img src="/assets/ArchitectureExampleCAfter.svg" height="250" alt="Company C after PancakeDB"/>
-        </div>
-      </div>
+      Questions? <a href="/contact/">Contact us.</a>
     </div>
   </div>
 </body>
