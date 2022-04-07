@@ -31,12 +31,12 @@
         Write directly from your services and streams:
       </div>
       <code>
-        curl ... $PANCAKE_ENDPOINT/rest/write_to_partition_simple -d '{<br />
+        curl ... $PANCAKE_ENDPOINT/rest/write_to_partition -d '{<br />
         &nbsp;"tableName": "purchases",<br />
         &nbsp;"rows": [{<br />
         &nbsp;&nbsp;"user_id": "abc",<br />
         &nbsp;&nbsp;"dollar_amount": 12.34<br />
-        &nbsp;"}]<br />
+        &nbsp;}]<br />
         }'
       </code>
       <div class="code-block-title">
