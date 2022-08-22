@@ -3,6 +3,7 @@
   --pdb-brown: #e29933;
   --pdb-blue: #80b0ff;
   --pdb-green: #339944;
+  --pdb-red:  #cc2222;
   --pdb-faint-green: #d9ead3;
   --max-width: 800px;
   --monospace: 'Lucida Console', 'Monaco', monospace;
@@ -30,9 +31,15 @@ code {
 
 .header {
   font-family: var(--monospace);
-  padding: 20px;
+  padding-botom: 20px;
   background-color: var(--pdb-blue);
   text-align: center;
+}
+
+.header-warning {
+  background-color: var(--pdb-red);
+  color: white;
+  padding: 10px 0;
 }
 
 .header-content {
